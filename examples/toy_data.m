@@ -1,10 +1,9 @@
 %% toy RobustPCA example: artificial data
+addpath('../');
 
 M = 50; N = 100;  % data matrix size
 toy_rank = 5;     % rank of the low-rank component
-toy_card = 0.05;  % cardinality of the sparse component
-
-addpath('../');
+toy_card = 0.20;  % cardinality of the sparse component
 
 % generate random basis vectors
 r = {};
@@ -33,7 +32,7 @@ subplot(2,3,1), imshow(X0), title('Original low-rank')
 subplot(2,3,2), imshow(X1), title('Original sparse')
 subplot(2,3,3), imshow(X), title('Original sum')
 subplot(2,3,4), imshow(L), title('Reconstructed low-rank')
-subplot(2,3,5), imshow(S), title('Reconstructed sprse')
+subplot(2,3,5), imshow(S), title('Reconstructed sparse')
 subplot(2,3,6), imshow(L+S), title('Reconstructed sum')
 
 fprintf(1, 'rank(L) = %d\n', rank(L));
