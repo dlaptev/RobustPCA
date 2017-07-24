@@ -3,7 +3,7 @@ addpath('../');
 
 % ! the movie will be downloaded from the internet !
 movieFile = 'RobustPCA_video_demo.avi';
-urlwrite('http://dlaptev.org/other/RobustPCA_video_demo.avi', movieFile);
+urlwrite('https://github.com/dlaptev/RobustPCA/blob/master/examples/RobustPCA_video_demo.avi?raw=true', movieFile);
 
 % open the movie
 n_frames = 180;
