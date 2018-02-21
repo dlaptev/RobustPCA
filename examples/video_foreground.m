@@ -34,7 +34,6 @@ range = 255;
 map = repmat((0:range)'./range, 1, 3);
 S = medfilt2(S, [5,1]); % median filter in time
 for i = (1:size(X, 1));
-    v = M(i,:);
     frame1 = reshape(X(i,:),height,[]);
     frame2 = reshape(L(i,:),height,[]);
     frame3 = reshape(abs(S(i,:)),height,[]);
